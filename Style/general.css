@@ -1,0 +1,38 @@
+/* Подключение шрифта */
+@font-face {
+	font-family: 'Actay Wide';
+	src:
+        url('../Fonts/ActayWide/ActayWide-Bold.woff') format('woff2'), 
+        url('../Fonts/ActayWide/ActayWide-Bold.woff2') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Actay';
+	src: 
+        url('../Fonts/Actay/Actay-Regular.woff') format('woff2'),
+        url('../Fonts/Actay/Actay-Regular.woff2') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Стили для контейнеров и задания стандартных значений для элементов*/
+body {
+    margin: 0;
+    min-width: 320px;
+    padding: 30px 15px;
+
+    background-image: url('../Media/mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+@media (min-width: 900px) {
+    body {
+        background-image: url('../Media/PictureMobile.jpg');
+    }
+}
+
+

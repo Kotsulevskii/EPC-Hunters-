@@ -1,0 +1,221 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #464646B9;
+  transition: background-color .3s ease;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Actay Wide';
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.header > p {
+  width: 88px;
+  margin: 0;
+
+  z-index: 6;
+  transition: color .3s ease;
+}
+
+.header > p.active {
+  color: #f2f3ef;
+  transition: color .3s ease;
+}
+
+/* Стили для кнопки бургер-меню */
+.burger-container {
+  display: flex;
+  align-items: center;
+}
+
+.burger-container > h3 {
+  padding: 17px 10px 17px 0;
+  margin: 0;
+
+  font-family: 'Actay';
+  font-size: 12px;
+  line-height: 46%;
+  color: #000;
+
+  z-index: 6;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.burger-container > h3.active {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    background-color: inherit;
+
+    border: none;
+    cursor: pointer;
+  }
+  /* Стили для неактивного состояния (бургер) */
+  .burger-menu span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fff;
+    transition: all .3s ease;
+    z-index: 6;
+  }
+  
+  /* Стили для активного состояния (крестик) */
+  .burger-menu.active span {
+    border: 1px;
+    background: #000;
+  }
+
+  .burger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Стили для появляющегося меню */
+  .menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+
+    width: 100%;
+    padding: 79px 30px;
+    margin: 0;
+    box-sizing: border-box;
+
+    list-style-type: none;
+    transition: top .3s ease;
+    background: #fff;
+
+    font-family: 'Actay';
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: #000;
+
+    z-index: 3;
+  }
+  
+  .menu.active {
+    top: 0;
+    transition: top .3s ease;
+  }
+
+  .menu  li {
+    margin-top: 15px;
+  }
+  
+  .menu a {
+    display: block;
+    
+    padding: 10px 0;
+  }
+
+  .menu > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu > p {
+    margin: 30px auto 0;
+    width: 162px;
+    border-bottom: 1px #000 solid;
+
+    text-transform: uppercase;
+  }
+
+  .menu > p::after {
+    content: url('../Media/ArrowBlack.svg');
+    width: 12px;
+    height: 12px;
+    margin-left: 50px;
+  }
+
+  /* Медиазапрос для создания адаптивности */
+  @media (min-width: 900px) {
+
+    .header > p {
+      font-size: 32px;
+      line-height: 102%;
+    }
+
+    .burger-menu {
+      display: none;
+    }
+
+    .burger-container {
+      flex-grow: 2;
+    }
+
+    .burger-container > h3 {
+      display: none;
+    }
+
+    .menu {
+      position: static;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+
+      background: inherit;
+
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .menu > div {
+      flex-direction: row;
+      padding: 18px 0 18px 52px;
+    }
+
+    .menu  li {
+    margin-left: 40px;
+  }
+
+    .menu > p {
+    margin: 0;
+    width: 173px;
+    border-bottom: 1px #fff solid;
+   
+    font-size: 20px;
+   }
+
+   .menu > p::after {
+    content: url('../Media/ArrowWhite.svg');
+    margin-left: 20px;
+  }
+  }
+

@@ -1,0 +1,107 @@
+.main {
+    text-align: center;
+}
+
+.main > h1 {
+    margin: 30px 0 15px 0;
+
+    font-family: 'Actay Wide';
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.btn {
+    padding: 8px 66px;
+
+    border: none;
+    border-radius: 140px;
+    background: #fff;
+
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.popup {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100% - 30px);
+    height: 470px;
+    max-height: 80%;
+    padding: 58px 17px 41px 17px;
+      
+    background-color: #fff;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.popup-btn {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    background-color: inherit;
+
+    border: none;
+    cursor: pointer;
+  }
+  
+  .popup-btn span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #000;
+    z-index: 6;
+  }
+
+  .popup-btn span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .popup-btn span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .popup-btn span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+.popup-content {
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.popup-content > p {
+    margin: 0;
+}
+
+.popup-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: #4646464d;
+  border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: #464646cc;
+  border-radius: 4px;
+}
+
